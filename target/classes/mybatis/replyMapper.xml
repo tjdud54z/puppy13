@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="replyMapper">
+
+<!-- 댓글 조회 -->
+	<select id="readReply" resultType="com.spring5.puppy13.board.vo.ReplyVO">
+    	SELECT
+    		  RNO, CONTENT, WRITER, REGDATE, DEL_GB 
+    	 FROM MP_REPLY13
+    	WHERE BNO = #{bno}
+	</select>
+
+<!-- 댓글 작성 -->
+	<insert id="writeReply">
+	INSERT INTO MP_REPLY13(
+							  BNO
+							, RNO
+							, CONTENT
+							, WRITER
+						  				)
+				  VALUES(	 #{bno}
+				  		   , MP_REPLY_SEQ13.NEXTVAL
+				  		   , #{content}
+				  		   , #{writer}	)
+	</insert>
+	
+<!-- 댓글 수정 -->
+	<update id="updateReply" parameterType="com.spring5.puppy13.board.vo.ReplyVO">
+		UPDATE MP_REPLY13 SET CONTENT = #{content}
+		WHERE RNO = #{rno}
+	</update>
+
+<!-- 댓글 삭제 -->
+	<delete id="deleteReply" parameterType="com.spring5.puppy13.board.vo.ReplyVO">
+		DELETE FROM MP_REPLY13
+		WHERE RNO = #{rno}
+	</delete>
+	
+<!-- 댓글 회원 삭제 -->
+	<update id="userdelReply" parameterType="com.spring5.puppy13.board.vo.ReplyVO">
+		UPDATE MP_REPLY13 
+		set DEL_GB = 'Y' 
+		where RNO = #{rno}
+	</update>
+	
+<!-- 선택된 댓글 조회 -->
+	<select id="selectReply" resultType="com.spring5.puppy13.board.vo.ReplyVO">
+		SELECT
+				BNO
+			  , RNO
+			  , CONTENT
+			  , WRITER
+			  , REGDATE
+		  FROM MP_REPLY13
+		 WHERE RNO = #{rno}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

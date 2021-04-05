@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- myBatis SQL-매퍼파일임을 선언 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">            
+
+<!-- MemberMapper.xml의 SQL문을 사용하기 위한 아이디 설정 -->
+<mapper namespace="User13Mapper">
+
+	<!-- resultMap을 미리 지정해서 사용하기 위해 설정 -->
+	<resultMap id="User13Result" type="com.spring5.puppy13.member.vo.MemberVO">
+	 	<result property="id" column="id" />
+        <result property="password" column="password" />
+        <result property="name" column="name" />
+        <result property="nickname" column="nickname" />
+        <result property="phone" column="phone" />
+        <result property="email" column="email" />
+        <result property="joindate" column="joindate" />
+        <result property="outuser" column="outuser" />
+	</resultMap>
+	
+	<!-- admin/회원 정보 -->
+	<select id="selectAllList" resultMap="User13Result">
+       SELECT * 
+       FROM hr.user13 
+       ORDER BY joindate DESC
+	</select>
+
+	<!-- user/회원 가입 -->
+	<insert id="insertUser13" parameterType="com.spring5.puppy13.member.vo.MemberVO">
+		insert into hr.user13
+		values(#{id}, #{password}, #{name}, #{nickname}, #{phone}, #{email}, default, default) 
+	</insert>
+	
+	<!-- admin/회원 삭제 -->
+	<delete id="deleteUser13" parameterType="String">
+		delete from hr.user13 
+		where 
+		id=#{id}
+	</delete>
+	
+	<!-- user/회원 탈퇴 -->
+	<update id="outuser" parameterType="com.spring5.puppy13.member.vo.MemberVO">
+		update hr.user13 set outuser = 'YES' 
+		where id=#{id} AND password=#{password}
+	</update>
+
+	<!-- user/회원 수정 -->
+	<update id="updateUser13" parameterType="com.spring5.puppy13.member.vo.MemberVO">
+		update hr.user13 set password=#{password}, name=#{name}, nickname=#{nickname}, phone=#{phone}, email=#{email} 
+		where id=#{id}
+	</update>
+
+	<!-- 아이디 중복체크 -->
+	<select id="idCheck" resultType="String" parameterType="String">
+		SELECT (CASE WHEN COUNT(*) = 0 THEN 'usable'
+		ELSE 'not_usable' END) AS RESULT 
+		FROM hr.user13 
+		WHERE id=#{id}
+	</select>
+	
+	<!-- 닉네임 중복체크 -->
+	<select id="nicknameCheck" resultType="String" parameterType="String">
+		SELECT (CASE WHEN COUNT(*) = 0 THEN 'usable'
+		ELSE 'not_usable' END) AS RESULT 
+		FROM hr.user13 
+		WHERE nickname=#{nickname}
+	</select>
+	
+	<!-- 로그인 확인 -->	
+	<select id="loginCheck" resultType="String">
+		SELECT * FROM hr.user13 
+		WHERE id=#{id} AND password=#{password}
+	</select>
+	
+	<!-- 회원정보 상세조회 -->	
+	<select id="viewMember" resultType="com.spring5.puppy13.member.vo.MemberVO" >
+		SELECT * FROM hr.user13 
+		WHERE id=#{id} AND password=#{password}
+	</select>
+	 
+</mapper>

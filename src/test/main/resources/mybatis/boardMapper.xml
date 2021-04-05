@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardMapper">
+
+	<!-- 게시판 글 작성 -->
+	<insert id="insert" parameterType="com.spring5.puppy13.board.vo.BoardVO" useGeneratedKeys="true" keyProperty="bno">
+	    <selectKey keyProperty="bno" resultType="int" order="BEFORE">
+	    	SELECT MP_BOARD_SEQ13.NEXTVAL FROM DUAL
+	    </selectKey>
+	    INSERT INTO MP_BOARD13(    BNO 
+	   					       , TITLE 
+	   					       , CONTENT 
+	   					       , WRITER  )
+	                  VALUES(    #{bno}
+	                 		   , #{title}
+	                 		   , #{content}
+	                 		   , #{writer}  )
+   
+    </insert>
+   
+   <!-- 게시판 리스트정보 -->
+	<select id="listPage" resultType="com.spring5.puppy13.board.vo.BoardVO" parameterType="com.spring5.puppy13.board.vo.SearchCriteria">
+		SELECT  BNO, 
+		        TITLE, 
+		        CONTENT,
+		        WRITER, 
+		        REGDATE, 
+		        HIT,
+		        DEL_GB
+		 FROM ( 
+		        SELECT BNO, 
+		               TITLE, 
+		               CONTENT, 
+		               WRITER, 
+		               REGDATE, 
+		               HIT,
+		               DEL_GB,
+		               ROW_NUMBER() OVER(ORDER BY BNO DESC) AS RNUM
+		         FROM MP_BOARD13
+		         WHERE 1=1 
+		         	<include refid="search"></include>
+		      ) MP
+		WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		ORDER BY BNO DESC
+	</select>
+	
+	<!-- 페이징 / 검색 in -->
+	<select id="listCount" parameterType="com.spring5.puppy13.board.vo.SearchCriteria" resultType="int">
+		SELECT COUNT(BNO)
+		   FROM MP_BOARD13
+		   WHERE 1=1
+		<include refid="search"></include>	
+		   AND BNO > 0
+	</select>
+	
+	<!-- 게시판 검색 -->
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 'x'.toString()">AND DEL_GB LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 't'.toString()">AND TITLE LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'c'.toString()">AND CONTENT LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'w'.toString()">AND WRITER LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'tc'.toString()">AND (TITLE LIKE '%' || #{keyword} || '%') or (CONTENT LIKE '%' || #{keyword} || '%')</if>
+		</if>
+	</sql>
+	
+	<!-- 게시판 상세정보 -->
+	<select id="read" parameterType="int" resultType="com.spring5.puppy13.board.vo.BoardVO">
+		SELECT   BNO
+			   , TITLE
+			   , CONTENT
+			   , WRITER
+			   , REGDATE
+		  FROM MP_BOARD13
+		 WHERE BNO = #{bno}
+	</select>
+	
+	<!-- 게시판 수정 -->
+	<update id="update" parameterType="com.spring5.puppy13.board.vo.BoardVO">
+		UPDATE MP_BOARD13
+		   SET TITLE    =   #{title},
+		   	   CONTENT  =   #{content}
+		 WHERE BNO = #{bno} 
+	</update>
+	
+	<!-- 게시판 삭제 -->
+	<delete id="delete" parameterType="int">
+		DELETE 
+		  FROM MP_BOARD13
+		 WHERE BNO = #{bno}
+	</delete>
+	
+	<!-- 게시판 회원 삭제 /-->
+	<update id="userdelboard" parameterType="com.spring5.puppy13.board.vo.BoardVO">				
+		update MP_BOARD13 set DEL_GB = 'Y' where BNO = #{bno}
+	</update>
+	
+   <!-- 첨부파일 업로드 -->
+    <insert id="insertFile" parameterType="hashMap">
+		INSERT INTO MP_FILE13(
+			FILE_NO,
+			BNO,
+			ORG_FILE_NAME,
+			STORED_FILE_NAME,
+			FILE_SIZE
+		)VALUES(
+			SEQ_MP_FILE_NO13.NEXTVAL,
+			#{BNO},
+			#{ORG_FILE_NAME},
+			#{STORED_FILE_NAME},
+			#{FILE_SIZE}
+		)
+    </insert>
+    
+    <!-- 첨부파일 조회 -->
+    <select id="selectFileList" parameterType="int" resultType="hashMap">
+    	SELECT FILE_NO,
+    		   ORG_FILE_NAME,
+    		   ROUND(FILE_SIZE/1024,1) AS FILE_SIZE,
+    		   DEL_GB
+    	FROM MP_FILE13
+    	WHERE BNO = #{BNO}
+    	AND DEL_GB = 'N'
+    	ORDER BY FILE_NO ASC
+    </select>
+    
+    <!-- 관리자 첨부파일 조회 -->
+    <select id="adminselectFileList" resultType="com.spring5.puppy13.board.vo.FileVO">
+    	SELECT FILE_NO, 
+    		   BNO, 
+    		   ORG_FILE_NAME, 
+    		   STORED_FILE_NAME, 
+    		   FILE_SIZE, 
+    		   REGDATE, 
+    		   DEL_GB
+    	FROM MP_FILE13 
+    	ORDER BY FILE_NO ASC
+    </select>
+    
+    <!-- 관리자 첨부파일 삭제 -->
+	<delete id="Filedelete" parameterType="int">
+		DELETE 
+		  FROM MP_FILE13
+		 WHERE FILE_NO = #{file_no}
+	</delete>
+	
+	
+    
+    <!-- 파일 검색 -->
+	<sql id="Filesearch">
+		<if test="searchType != null">
+			<if test="searchType == 'x'.toString()">where DEL_GB LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'num'.toString()">where BNO LIKE '%' || #{keyword} || '%'</if>
+		</if>
+	</sql>
+    
+    <!-- 파일 검색 -->
+	<select id="FileSearch" resultType="com.spring5.puppy13.board.vo.FileVO" parameterType="com.spring5.puppy13.board.vo.SearchCriteria">
+	select FILE_NO, 
+		   BNO, 
+		   ORG_FILE_NAME, 
+		   STORED_FILE_NAME, 
+		   FILE_SIZE, 
+		   REGDATE, 
+		   DEL_GB 
+	       		FROM (
+	          		 SELECT FILE_NO, 
+	           				BNO, 
+	           		  		ORG_FILE_NAME, 
+	           		  		STORED_FILE_NAME, 
+	           		  		FILE_SIZE, 
+	           		  		REGDATE, 
+	           		  		DEL_GB, 
+	           		  		row_number() over(order by bno desc) as rNum 
+	           		 FROM MP_FILE13
+	      <include refid="Filesearch"></include>
+	     ) mb
+	    where rNum between #{rowStart} and #{rowEnd} 
+	    order by bno desc
+	</select>
+	
+	<!-- 파일 페이징 -->
+<!-- 	<select id="countSearch" resultType="int">
+		SELECT COUNT(file_no) 
+		FROM MP_FILE 
+		<include refid="Filesearch"></include> 
+   		and file_no > 0
+	</select> -->
+    
+    <!-- 첨부파일 다운 -->
+    <select id="selectFileInfo" parameterType="hashMap" resultType="hashMap">
+    	SELECT 
+    		STORED_FILE_NAME, 
+    		ORG_FILE_NAME 
+    	FROM MP_FILE13 
+    	WHERE FILE_NO = #{FILE_NO}
+    </select>
+    
+    <!-- 첨부파일 수정 -->
+    <update id="updateFile" parameterType="hashMap">
+    	UPDATE MP_FILE13 SET
+    	DEL_GB = 'Y'
+    	WHERE FILE_NO = #{FILE_NO}
+    </update>
+      
+    <!-- 게시판 조회수 -->
+    <update id="boardHit" parameterType="int">
+    	UPDATE MP_BOARD13 SET
+    	HIT = HIT+1
+    	WHERE BNO = #{bno}
+    </update>
+    
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<typeAliases>
+		<!-- DAO에서 SQL문으로 값을 전달할 때 또는 SQL문을 실행한 후       -->
+		<!-- 가져온 값을 DAO로 전달할 때 사용할 VO 빈이 생성되도록 설정합니다. -->
+		<typeAlias alias="member" type="com.spring5.puppy13.member.vo.MemberVO"/>
+		<!-- <typeAlias alias="board" type="com.spring5.pro24.board.vo.MemberVO"/> -->
+	</typeAliases>
+
+</configuration>
