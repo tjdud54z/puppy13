@@ -169,8 +169,25 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 
+function loginck_usermypage() {
+	var sessionlogin = '<%=(String)session.getAttribute("id") %>';
+	if(sessionlogin == "null"){	
+		alert("로그인을 해야지 가능한 기능입니다.");
+		location.href="/puppy13/login.do";	
+	}else{	
+		location.replace("/puppy13/usermypage.do");
+	}
+}
 
-
+function loginck_board() {
+	var sessionlogin = '<%=(String)session.getAttribute("id") %>';
+	if(sessionlogin == "null"){	
+		alert("로그인 상태가 아니므로 글보기만 가능합니다.");
+		location.href="/puppy13/board/list.do";	
+	}else{	
+		location.replace("/puppy13/board/list.do");
+	}
+}
 
 </script>
 </body>
