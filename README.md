@@ -45,8 +45,14 @@
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
 
 ### < 회원가입 >
-- 약관 동의 -> 회원가입 -> 로그인
+<details close>
+  <summary> 
+    <b>회원 가입 스크린샷</b><br>
+  </summary>
 
+![Agree](https://user-images.githubusercontent.com/81797197/114300795-e2a78e80-9afc-11eb-926d-3c3d7bd4e727.jpg)
+
+</details>
 
 
 
