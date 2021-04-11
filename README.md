@@ -42,7 +42,7 @@
 
 ## :pencil: 코드 및 설명
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
-* 'Screenshot' 포함되어 있는 텍스트를 누루면, 구현 화면을 보실 수 있습니다.
+* 'Screenshot' 포함되어 있는 텍스트를 누면, 구현 화면을 보실 수 있습니다.
 
 ### <-- 회원가입 -->
 <details close>
