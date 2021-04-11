@@ -31,7 +31,7 @@
 - 서버 : Apache Tomcat® server 9.0 (zip파일로 다운로드하여 셋팅하는 것을 추천드립니다.)
 - DB : Oracle 11g and Oracle 11g Developers (단, Developers는 선택 사항입니다.)
 
-- [제목](https://github.com/tjdud54z/puppy13/src/main/resources/mybatis/User13Mapper.xml)
+- [제목](https://github.com/tjdud54z/puppy13/blob/main/src/main/resources/mybatis/User13Mapper.xml)
 
 ## 감사의 말
 
