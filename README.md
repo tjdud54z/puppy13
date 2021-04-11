@@ -45,7 +45,7 @@
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
 * 스크린샷 포함되어 있는 텍스트를 누루면, 구현 화면을 보실 수 있습니다.
 
-### < 회원가입 >
+### <-- 회원가입 -->
 <details close>
   <summary> 
     <b>회원 가입 스크린샷</b><br>
@@ -53,7 +53,7 @@
   
 ![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
 ![puppy2](https://user-images.githubusercontent.com/81797197/114301099-28188b80-9afe-11eb-9792-7ddda0cdb911.jpg)<br>
-![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)<br>
+![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)<br><br>
 
 </details>
 
@@ -63,19 +63,21 @@
 § 비밀번호와 비밀번호재확인이 틀릴 경우 alert메세지로 확인할 수 있게 하였습니다.<br>
 § 부분 마다 javascript를 사용하여 유효성 검사를 하였습니다.<br>
 
-### < 로그인/로그아웃 >
+### <-- 로그인/로그아웃 -->
 <details close>
   <summary> 
     <b>로그인/로그아웃 스크린샷</b><br>
   </summary>
   
-![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
-![puppy2](https://user-images.githubusercontent.com/81797197/114301099-28188b80-9afe-11eb-9792-7ddda0cdb911.jpg)<br>
-![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)<br>
+![puppy4](https://user-images.githubusercontent.com/81797197/114301867-87c46600-9b01-11eb-8c5d-310597d09790.jpg)<br>
+![puppy7](https://user-images.githubusercontent.com/81797197/114301880-96128200-9b01-11eb-8f5d-355f74ac267b.jpg<br>
+![puppy6](https://user-images.githubusercontent.com/81797197/114301873-8dba4700-9b01-11eb-9ab9-b1e18ba8731f.jpg)<br>
+![puppy5](https://user-images.githubusercontent.com/81797197/114301869-8a26c000-9b01-11eb-8c96-04fea256aae2.jpg)<br><br>
 
 </details>
-
-
+§ 로그인 정보를 DB에서 가지고 와서 비교후에 ID와 PW가 같을 경우만 로그인이 가능합니다. 계정이 틀릴시에 아래에 빨간색으로 메시지를 표시합니다.
+§ 로그인 성공 시 session에 저장되며, session 정보를 가지고와서 간단한 정보를 우측상단에 표시해 주고 로그아웃 버튼이 활성화 됩니다. session 정보가 없을 경우 로그인 버튼이 활성화 됩니다.
+§ 로그아웃 시 session을 없앤 뒤에, 로그인 화면에 로그아웃 메시지가 표시됩니다.
 
 
 ## 🐤 감사의 말
