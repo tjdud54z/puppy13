@@ -44,12 +44,12 @@
 
 ## :pencil: 코드 및 설명
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
-* 스크린샷 포함되어 있는 텍스트를 누루면, 구현 화면을 보실 수 있습니다.
+* 'Screenshot' 포함되어 있는 텍스트를 누루면, 구현 화면을 보실 수 있습니다.
 
 ### <-- 회원가입 -->
 <details close>
   <summary> 
-    <b style="color:gray;">회원 가입 스크린샷</b><br>
+    <b>Screenshot</b><br>
   </summary>
   
 ![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
@@ -67,7 +67,7 @@
 ### <-- 로그인/로그아웃 -->
 <details close>
   <summary> 
-    <b>로그인/로그아웃 스크린샷</b><br>
+    <b>Screenshot</b><br>
   </summary>
   
 ![puppy4](https://user-images.githubusercontent.com/81797197/114301867-87c46600-9b01-11eb-8c5d-310597d09790.jpg)<br>
@@ -84,7 +84,7 @@
 ### <-- 마이페이지 -->
 <details close>
   <summary> 
-    <b>마이페이지 스크린샷</b><br>
+    <b>Screenshot</b><br>
   </summary>
   
 ![puppy8](https://user-images.githubusercontent.com/81797197/114302329-901da080-9b03-11eb-9e7e-f69afece8f2a.jpg)<br>
@@ -101,7 +101,7 @@
 ### <-- 메인게시판/댓글 -->
 <details close>
   <summary> 
-    <b>메인게시판/댓글 스크린샷</b><br>
+    <b>Screenshot</b><br>
   </summary>
   
 ![puppy11](https://user-images.githubusercontent.com/81797197/114302720-36b67100-9b05-11eb-8a88-68e5985cebd8.jpg)<br>
@@ -111,7 +111,7 @@
 </details>
 
 § 게시판/댓글의 모든 작성, 삭제, 수정 버튼은 session의 정보를 비교하여 jstl태그를 사용해 활성화/비활성화를 했습니다. (session의 정보가 없으면 게시판 및 댓글 보기만 가능합니다.)<br>
-§ DB에 게시판 정보를 가지고 와서 list로 게시판 정보를 가지고 왔습니다. (게시물과 같이 댓글도 볼 수 있도록 구현했습니다.)<br>
+§ DB에 게시판 정보를 가지고 와서 list객체로 게시판 정보를 가지고 왔습니다. (게시물과 같이 댓글도 볼수 있도록 구현했습니다.)<br>
 § 게시물 작성 시 빈칸은 javaScript로 유효성을 검사하고, 파일도 같이 추가 될 수 있도록 구현하였습니다.<br>
 § 게시물 상세보기에서 작성자가 올려놓은 파일을 다운로드 할 수 있습니다.<br>
 § 게시물/댓글 모두 페이징을 구현하였습니다.<br>
@@ -119,7 +119,7 @@
 ### <-- 관리자페이지 -->
 <details close>
   <summary> 
-    <b>관리자페이지 스크린샷</b><br>
+    <b>Screenshot</b><br>
   </summary>
   
 ![puppy14](https://user-images.githubusercontent.com/81797197/114303257-32d81e00-9b08-11eb-9103-7eb4a8945913.jpg)<br>
@@ -128,9 +128,13 @@
 
 </details>
 
+§ 관리자 계정으로만 들어갈 수 있도록 javascript를 사용했습니다. (본 작성자는 'admin'을 사용했습니다.)
+§ 회원 관리에서는 회원들의 탈퇴여부를 보고, DB에서 완전히 삭제할 수 있습니다.
+§ 게시판 관리와 파일 관리에서는 삭제여부를 보고, DB에서 완전히 삭제할 수 있습니다. (검색 기능으로 삭제여부, 제목 등을 검색할 수 있습니다.)
+
 ## 🐤 감사의 말
 
-* 현 프로젝트는 작성자의 대학교 때 미숙한 상태의 프로젝트 입니다. 참고용으로만 사용해주세요.
-* 본 코드는 JSP, DAO, DTO로 구성되어 있습니다.
-* 여러가지 코드별로 나눠서 작성을 했다면 괜찮았을 텐데 대학교 시절 실력이 부족하여, 코드가 너무 지저분 함이 있습니다.
+* 항상 저의 프로젝트를 봐주셔서 감사합니다. 적은 기간내에 진행된 개인 프로젝트이며, 다른 여러 기능이 구현이 되지 않았습니다.
+  '좀 더 이런 기능이 있으면 좋겠다.'라고 이메일 남겨주시기 바랍니다.
+* 깃허브로 추후 계속해서 프로젝트에 대해서 업데이트 시킬 예정입니다.
 * 이 후 좀 더 체계적이고 완성도가 높은 프로젝트를 여러분에게 공유하겠습니다. 감사합니다.
