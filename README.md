@@ -49,7 +49,7 @@
   <summary> 
     <b>회원 가입 스크린샷</b><br>
   </summary>
-![puppy1](https://user-images.githubusercontent.com/81797197/114301021-c2c49a80-9afd-11eb-8f9f-b08ab166ef6b.jpg)
+![image](https://user-images.githubusercontent.com/81797197/114301021-c2c49a80-9afd-11eb-8f9f-b08ab166ef6b.jpg)
 </details>
 
 
