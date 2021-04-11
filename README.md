@@ -25,13 +25,20 @@
 - Framework
   - Spring
 
-## 설치 프로그램
+## 설치 프로그램 및 셋팅
 
 - 작업 툴 : Eclipse (JavaEE IDE로 설치)(단, Java SE 8 version이 깔려있어야 설치가 진행 됩니다.)
 - 서버 : Apache Tomcat® server 9.0 (zip파일로 다운로드하여 셋팅하는 것을 추천드립니다.)
 - DB : Oracle 11g and Oracle 11g Developers (단, Developers는 선택 사항입니다.)
+- 환경 변수(path) : 환경변수는 [Java](https://macchiato.tistory.com/9)와 [오라클](https://request-response.tistory.com/6)을 설정해주세요.
+- porm.xml 설정 : 제 파일에 올라가 있는 porm.xml파일을 사용해 주세요.
+- project Facets : Java 1.8로 셋팅 / Dynamic Web Module 4.0
 
 - [제목](https://github.com/tjdud54z/puppy13/blob/main/src/main/resources/mybatis/User13Mapper.xml)
+
+## Database
+
+- views에 Database.txt파일을 참고해 주세요.
 
 ## 감사의 말
 
