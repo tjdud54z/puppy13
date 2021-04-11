@@ -70,9 +70,9 @@
   </summary>
   
 ![puppy4](https://user-images.githubusercontent.com/81797197/114301867-87c46600-9b01-11eb-8c5d-310597d09790.jpg)<br>
-![puppy7](https://user-images.githubusercontent.com/81797197/114301880-96128200-9b01-11eb-8f5d-355f74ac267b.jpg<br>
-![puppy6](https://user-images.githubusercontent.com/81797197/114301873-8dba4700-9b01-11eb-9ab9-b1e18ba8731f.jpg)<br>
-![puppy5](https://user-images.githubusercontent.com/81797197/114301869-8a26c000-9b01-11eb-8c96-04fea256aae2.jpg)<br><br>
+![puppy7](https://user-images.githubusercontent.com/81797197/114301880-96128200-9b01-11eb-8f5d-355f74ac267b.jpg)<br>
+![puppy5](https://user-images.githubusercontent.com/81797197/114301869-8a26c000-9b01-11eb-8c96-04fea256aae2.jpg)<br>
+![puppy6](https://user-images.githubusercontent.com/81797197/114301873-8dba4700-9b01-11eb-9ab9-b1e18ba8731f.jpg)<br><br>
 
 </details>
 § 로그인 정보를 DB에서 가지고 와서 비교후에 ID와 PW가 같을 경우만 로그인이 가능합니다. 계정이 틀릴시에 아래에 빨간색으로 메시지를 표시합니다.
