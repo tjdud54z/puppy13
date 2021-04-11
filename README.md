@@ -7,7 +7,7 @@
 
 ## :man_astronaut: 프로젝트 제작자
 
-* [정서영] - 로그인/로그아웃, 회원가입, 메인게시판, 관리자페이지
+* [정서영] - 회원가입, 로그인/로그아웃, 마이페이지, 메인게시판/, 관리자페이지
 
 ## ⭐️ 기술 스택
 
@@ -32,6 +32,7 @@
 - DB : Oracle 11g and Oracle 11g Developers (단, Developers는 선택 사항입니다.)
 - 환경 변수(path) : 환경변수는 [Java](https://macchiato.tistory.com/9)와 [오라클](https://request-response.tistory.com/6)을 설정해주세요.
 - porm.xml 설정 : 제 파일에 올라가 있는 porm.xml파일을 사용해 주세요.
+- *** context.xml 설정 : 제 파일에 올라가 있는 *** context.xml파일을 사용해 주세요. (ex.servlet-context.xml, root-context.xml 등)
 - project Facets : Java 1.8로 셋팅 / Dynamic Web Module 4.0
 
 - [제목](https://github.com/tjdud54z/puppy13/blob/main/src/main/resources/mybatis/User13Mapper.xml)
@@ -75,10 +76,44 @@
 ![puppy6](https://user-images.githubusercontent.com/81797197/114301873-8dba4700-9b01-11eb-9ab9-b1e18ba8731f.jpg)<br><br>
 
 </details>
+
 § 로그인 정보를 DB에서 가지고 와서 비교후에 ID와 PW가 같을 경우만 로그인이 가능합니다. 계정이 틀릴시에 아래에 빨간색으로 메시지를 표시합니다.<br>
 § 로그인 성공 시 session에 저장되며, session 정보를 가지고와서 간단한 정보를 우측상단에 표시해 주고 로그아웃 버튼이 활성화 됩니다. session 정보가 없을 경우 로그인 버튼이 활성화 됩니다.<br>
 § 로그아웃 시 session을 없앤 뒤에, 로그인 화면에 로그아웃 메시지가 표시됩니다.<br>
 
+### <-- 마이페이지 -->
+<details close>
+  <summary> 
+    <b>마이페이지 스크린샷</b><br>
+  </summary>
+  
+![puppy8](https://user-images.githubusercontent.com/81797197/114302329-901da080-9b03-11eb-9e7e-f69afece8f2a.jpg)<br>
+![puppy9](https://user-images.githubusercontent.com/81797197/114302331-914ecd80-9b03-11eb-9e37-1c436e0b5af4.jpg)<br>
+![puppy10](https://user-images.githubusercontent.com/81797197/114302332-91e76400-9b03-11eb-94fb-9e2ccdb00d2f.jpg)<br><br>
+
+</details>
+
+§ 마이페이지 버튼은 session을 있어야만 활성화 되도록 Javascript를 사용했습니다.<br>
+§ 정보 수정에서 회원가입과 같이 Ajax와 JavaScript를 사용해서 유효성 검사를 진행했습니다.<br>
+§ 회원 탈퇴는 DB의 정보의 ID와 PW가 같아야만 회원 퇼퇴가 가능합니다. 회원 탈퇴 시 DB에 탈퇴여부 컬럼에 'YES' 변경 됩니다. (완전삭제는 관리자가 진행합니다.)<br>
+§ 탈퇴 된 회원은 로그인 할 수 없도록 javascript를 사용했습니다.<br>
+
+### <-- 메인게시판/댓글 -->
+<details close>
+  <summary> 
+    <b>메인게시판/댓글 스크린샷</b><br>
+  </summary>
+  
+![puppy11](https://user-images.githubusercontent.com/81797197/114302720-36b67100-9b05-11eb-8a88-68e5985cebd8.jpg)<br>
+![puppy12](https://user-images.githubusercontent.com/81797197/114302722-374f0780-9b05-11eb-8a28-a2fc980bb1e8.jpg)<br>
+![puppy13](https://user-images.githubusercontent.com/81797197/114302724-37e79e00-9b05-11eb-9709-b93a6fb834b9.jpg)<br><br>
+
+</details>
+
+§ 게시판/댓글의 모든 작성, 삭제, 수정 버튼은 session의 정보를 비교하여 jstl태그를 사용해 활성화/비활성화를 했습니다. (session의 정보가 없으면 게시판 및 댓글 보기만 가능합니다.)<br>
+§ DB에 게시판 정보를 가지고 와서 list로 게시판 정보를 가지고 왔습니다. (게시물과 같이 댓글도 볼 수 있도록 구현했습니다.)<br>
+§ 게시물 작성 시 빈칸은 javaScript로 유효성을 검사하고, 파일도 같이 추가 될 수 있도록 구현하였습니다.<br>
+§ 게시물 상세보기에서 작성자가 올려놓은 파일을 다운로드 할 수 있습니다.<br>
 
 ## 🐤 감사의 말
 
