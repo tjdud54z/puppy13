@@ -43,6 +43,7 @@
 
 ## :pencil: 코드 및 간략 설명.
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
+* 스크린샷은 스크린샷 포함되어 있는 텍스트를 누루면, 구현 화면을 보실 수 있습니다.
 
 ### < 회원가입 >
 <details close>
@@ -55,6 +56,11 @@
 ![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)
 
 </details>
+- 회원가입 전 2개의 약관동의를 해야지만 회원가입 페이지로 넘어갈 수 있도록 Javascript를 사용했습니다.
+- 빈칸이 있을 경우 Javascript를 사용하여 빈칸 제일 1번째로 커서가 이동시키게 하였습니다.
+- ID와 nickname 입력시 Ajax를 사용하여 DB의 데이터와 데이터의 존재여부를 확인하여 alert메세지로 중복인지 사용가능한지 알 수 있습니다.
+- 비밀번호와 비밀번호재확인이 틀릴 경우 alert메세지로 확인할 수 있게 하였습니다.
+- 부분 마다 javascript를 사용하여 유효성 검사를 하였습니다.
 
 
 
