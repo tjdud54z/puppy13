@@ -50,8 +50,8 @@
     <b>회원 가입 스크린샷</b><br>
   </summary>
   
-![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)
-![puppy2](https://user-images.githubusercontent.com/81797197/114301099-28188b80-9afe-11eb-9792-7ddda0cdb911.jpg)
+![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
+![puppy2](https://user-images.githubusercontent.com/81797197/114301099-28188b80-9afe-11eb-9792-7ddda0cdb911.jpg)<br>
 ![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)
 
 </details>
