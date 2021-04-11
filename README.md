@@ -32,10 +32,8 @@
 - DB : Oracle 11g and Oracle 11g Developers (단, Developers는 선택 사항입니다.)
 - 환경 변수(path) : 환경변수는 [Java](https://macchiato.tistory.com/9)와 [오라클](https://request-response.tistory.com/6)을 설정해주세요.
 - porm.xml 설정 : 제 파일에 올라가 있는 porm.xml파일을 사용해 주세요.
-- *** context.xml 설정 : 제 파일에 올라가 있는 *** context.xml파일을 사용해 주세요. (ex.servlet-context.xml, root-context.xml 등)
-- project Facets : Java 1.8로 셋팅 / Dynamic Web Module 4.0
-
-- [제목](https://github.com/tjdud54z/puppy13/blob/main/src/main/resources/mybatis/User13Mapper.xml)
+- *** context.xml 설정 : 제 파일에 올라가 있는 *** context.xml파일을 사용해 주세요. (ex. servlet-context.xml, root-context.xml 등)
+- project Facets : Java 1.8 / Dynamic Web Module 4.0
 
 ## Database
 
