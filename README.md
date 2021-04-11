@@ -53,14 +53,14 @@
   
 ![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
 ![puppy2](https://user-images.githubusercontent.com/81797197/114301099-28188b80-9afe-11eb-9792-7ddda0cdb911.jpg)<br>
-![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)
+![puppy3](https://user-images.githubusercontent.com/81797197/114301105-2f3f9980-9afe-11eb-9657-8161f0a54a46.jpg)<br>
 
 </details>
-- 회원가입 전 2개의 약관동의를 해야지만 회원가입 페이지로 넘어갈 수 있도록 Javascript를 사용했습니다.
-- 빈칸이 있을 경우 Javascript를 사용하여 빈칸 제일 1번째로 커서가 이동시키게 하였습니다.
-- ID와 nickname 입력시 Ajax를 사용하여 DB의 데이터와 데이터의 존재여부를 확인하여 alert메세지로 중복인지 사용가능한지 알 수 있습니다.
-- 비밀번호와 비밀번호재확인이 틀릴 경우 alert메세지로 확인할 수 있게 하였습니다.
-- 부분 마다 javascript를 사용하여 유효성 검사를 하였습니다.
+- 회원가입 전 2개의 약관동의를 해야지만 회원가입 페이지로 넘어갈 수 있도록 Javascript를 사용했습니다.<br>
+- 빈칸이 있을 경우 Javascript를 사용하여 빈칸 제일 1번째로 커서가 이동시키게 하였습니다.<br>
+- ID와 nickname 입력시 Ajax를 사용하여 DB의 데이터와 데이터의 존재여부를 확인하여 alert메세지로 중복인지 사용가능한지 알 수 있습니다.<br>
+- 비밀번호와 비밀번호재확인이 틀릴 경우 alert메세지로 확인할 수 있게 하였습니다.<br>
+- 부분 마다 javascript를 사용하여 유효성 검사를 하였습니다.<br>
 
 
 
