@@ -114,6 +114,19 @@
 § DB에 게시판 정보를 가지고 와서 list로 게시판 정보를 가지고 왔습니다. (게시물과 같이 댓글도 볼 수 있도록 구현했습니다.)<br>
 § 게시물 작성 시 빈칸은 javaScript로 유효성을 검사하고, 파일도 같이 추가 될 수 있도록 구현하였습니다.<br>
 § 게시물 상세보기에서 작성자가 올려놓은 파일을 다운로드 할 수 있습니다.<br>
+§ 게시물/댓글 모두 페이징을 구현하였습니다.<br>
+
+### <-- 관리자페이지 -->
+<details close>
+  <summary> 
+    <b>관리자페이지 스크린샷</b><br>
+  </summary>
+  
+![puppy14](https://user-images.githubusercontent.com/81797197/114303257-32d81e00-9b08-11eb-9103-7eb4a8945913.jpg)<br>
+![puppy15](https://user-images.githubusercontent.com/81797197/114303260-34094b00-9b08-11eb-9e28-9830c586b200.jpg)<br>
+![puppy16](https://user-images.githubusercontent.com/81797197/114303262-34094b00-9b08-11eb-90b9-3338c70896dd.jpg)<br><br>
+
+</details>
 
 ## 🐤 감사의 말
 
