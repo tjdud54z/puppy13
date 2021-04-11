@@ -49,9 +49,9 @@
   <summary> 
     <b>회원 가입 스크린샷</b><br>
   </summary>
-
-![Agree](https://user-images.githubusercontent.com/81797197/114300795-e2a78e80-9afc-11eb-926d-3c3d7bd4e727.jpg)
-
+![puppy1](https://user-images.githubusercontent.com/81797197/114300901-4df16080-9afd-11eb-92c4-433a91e39870.jpg)
+![puppy2](https://user-images.githubusercontent.com/81797197/114300922-5fd30380-9afd-11eb-8fad-6664653fd179.jpg)
+![puppy3](https://user-images.githubusercontent.com/81797197/114300964-91e46580-9afd-11eb-841d-e845893f8381.jpg)
 </details>
 
 
