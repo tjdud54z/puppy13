@@ -49,7 +49,7 @@
 ### <-- 회원가입 -->
 <details close>
   <summary> 
-    <b>회원 가입 스크린샷</b><br>
+    <b style="color:gray;">회원 가입 스크린샷</b><br>
   </summary>
   
 ![puppy1](https://user-images.githubusercontent.com/81797197/114301078-0c14ea00-9afe-11eb-9c0d-449cfbeabb0b.jpg)<br>
