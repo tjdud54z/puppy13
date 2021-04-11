@@ -41,7 +41,7 @@
 - OracleDB를 MyBatis로 매핑해서 사용합니다.
 - views에 Database.txt파일을 참고해 주세요.
 
-## 코드 및 간략 설명.
+## :pencil: 코드 및 간략 설명.
 * 본 코드는 Java 언어를 사용하여 MVC(Model View Controlle)구조인 Spring으로 진행된 프로젝트입니다.
 
 #### 회원가입
