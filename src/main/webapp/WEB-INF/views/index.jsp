@@ -177,7 +177,7 @@
                            현재 사회에서 우리 곁에 반려동물들을 키우는 사람들이 많습니다. 하지만 그에 대한<br>
                            여러가지 팁을 찾고 싶지만 검색해야하고..찾아봐야하고..귀찮은 점이 있습니다!<br>
                            하지만 저희 M.A.T를 이용하시면 실시간으로 서로의 반려견에 대한 정보와 팁들을<br>
-                           손쉽게 찾아볼 수 있습니다! 지금부터 반려동물에 대한 정보를 손쉽게 찾으러 GoGO! GO!<br><br>
+                           손쉽게 찾아볼 수 있습니다! 지금부터 반려동물에 대한 정보를 손쉽게 찾으러 출발!!<br><br>
             <b style="font-size: 50px;">나만의 반려동물의 팁 M.A.T</b><br><br>
             <img alt="이미지업음" src="resources/image/siba1.gif" width="200px" height="200px">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
